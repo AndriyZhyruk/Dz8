@@ -1,0 +1,22 @@
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the file path: ");
+        string filePath = Console.ReadLine();
+
+        if (File.Exists(filePath))
+        {
+            string content = File.ReadAllText(filePath);
+            Console.WriteLine("File content:");
+            Console.WriteLine(content);
+        }
+        else
+        {
+            Console.WriteLine("Error: File not found.");
+        }
+    }
+}
